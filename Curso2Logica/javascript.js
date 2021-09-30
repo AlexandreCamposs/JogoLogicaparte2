@@ -1,9 +1,15 @@
   let imagemDaEstrada;
   let imagemDoAtor;
+  let imagemCarro;
+  //carro
+  let xCarro = 600;
+  //ator
+  let yAtor = 366;
 
   function preload() {
     imagemDaEstrada = loadImage("imagens/estrada.png");
     imagemDoAtor = loadImage("imagens/ator-1.png");
+    imagemCarro = loadImage("imagens/carro-1.png");
   }
 
   function setup() {
@@ -12,6 +18,26 @@
   
   function draw() {
     background(imagemDaEstrada);
-    image(imagemDoAtor, 100, 366 );
-    
+    mostraAtor();
+    mostraCarro();
+    movimentaCarro();
+    movimentaAtor();
+  }
+
+  function mostraAtor () {
+    image(imagemDoAtor, 100, yAtor, 30, 30 );
+  }
+  function mostraCarro () {
+    image(imagemCarro, xCarro, 40, 50, 40); // posição x 420, posição y 40
+  }
+  function movimentaCarro () {
+    xCarro -= 2        // xCarro = xCarro -2 pode ser escrito  xCarro -= 2 "REFATURAÇÂO DE CÓDIGO"
+  }
+  function movimentaAtor () {
+    if (keyIsDown(UP_ARROW)){
+      yAtor -= 3;
+    }
+    if (keyIsDown(DOWN_ARROW)){
+      yAtor += 3;
+    }
   }
