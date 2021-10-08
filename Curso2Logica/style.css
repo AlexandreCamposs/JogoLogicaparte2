@@ -3,6 +3,14 @@ html, body {
     padding: 0;
   }
   canvas {
-    display: block;
+    display: block; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
   }
-  
+  p {
+    position: absolute;
+    left: 50pt; 
+    font-size: 20vh;  
+  }

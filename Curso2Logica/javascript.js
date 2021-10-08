@@ -1,6 +1,6 @@
 
   function setup() {
-    somDaTrilha.loop();
+    //somDaTrilha.loop();
     console.log(somDaTrilha);
     createCanvas(500, 400);
     
